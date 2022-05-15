@@ -1,0 +1,52 @@
+/*body{
+    background-image: url(1.jpg);
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #8DB5ED;
+    background-blend-mode: screen;
+    background-size: cover;
+}
+*/
+
+body{
+    height: 100%;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.tr{
+    clip-path: polygon(40% 0%, 41% 26%, 100% 20%, 100% 80%, 40% 72%, 40% 100%, 0% 50%);
+    height: 60%;
+    width: 60%;
+    background-color: blueviolet;
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes blink {
+    0%{
+        background: indigo;
+    }
+    30%{
+        background: red;
+    }    
+    50%{
+        background: yellow;
+    }    
+    70%{
+        background: green;
+    }
+    100%{
+        background: blue;
+    }
+}
+
+.box{
+    position: fixed;
+    left: 65%;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    animation: blink 10s infinite;
+    -webkit-animation: blink 10% infinite;
+}
